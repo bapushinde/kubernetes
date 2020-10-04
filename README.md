@@ -16,7 +16,7 @@ P.S.: *I have setup 3 Nodes Kubernetes Cluster on GCP*
 
   1. SSH into all 3 VMs & switch to root user using `sudo -i`
 
-  2. Open URL -> https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker in browser (or another tab window) 
+  2. Open URL -> [**Container Runtime**](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker) in browser (or another tab window) 
 
   3. Select **Ubuntu 16.04+** Tab to executes commands on all **3 VMs to setup Docker runtime**.
          
@@ -51,9 +51,9 @@ root@terraform-k8s-worker-1:~#
 
 #### Install Kubernetes Orachestration tool "kubeadm" on all Nodes.
 
-   1. Open kubernetes documentation link -> https://kubernetes.io/docs/home/ and enter text search `install kubeadm` in search box on left hand side
+   1. Open kubernetes documentation link -> [**Kubernetes Documentation**](https://kubernetes.io/docs/home/) and search `install kubeadm` in search box on left hand side
    
-   2. Open this link from *Search Result* -> https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+   2. Open link from *Search Result* -> [**Installing kubeadm** | Kubernetes](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
       
       On this page Jump on to section **Installing kubeadm, kubelet and kubectl** 
       
@@ -84,7 +84,7 @@ root@terraform-k8s-worker-1:~#
 #### Setup Master Node in the Cluster
 *Important!:* To setup master node in the cluster please Switch to Master Node VM terminal
 
-1. Open link for refrerence to run **`kubeadm init`** on **Master node VM**  --> https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ 
+1. Search for **Creating a cluster with kubeadm** to run **`kubeadm init`** on **Master node VM** , Open link from search result --> [**Creating a cluster with kubeadm** | Kubernetes](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) 
 
 On this page Jump on to section **More information** 
 
@@ -172,9 +172,9 @@ kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discove
   ```
 4. Now to apply Network policy to establish network communication within cluster between master node & worker node. And get *Master node* in *ready* state. Here we will setup Calico network policy
     
-    1. Open link to setup calico network policy on **Master node** --> https://docs.projectcalico.org/getting-started/kubernetes/self-managed-onprem/onpremises
+    1. Open [**Calico Network Policy**](https://docs.projectcalico.org/getting-started/kubernetes/self-managed-onprem/onpremises) to setup on **Master node**  
       
-      **Tip:** To open calico network policy documentation through Google search, *Google search "calico.yaml kubernetes"* and open first link **"Install Calico networking and network policy for on-premises ..."**
+      **Tip:** To open calico network policy documentation through Google search, *In Google search type "calico.yaml kubernetes"* and open first link [**"Install Calico networking and network policy for on-premises ..."**](https://docs.projectcalico.org/getting-started/kubernetes/self-managed-onprem/onpremises) & Jump to Section *Install Calico with Kubernetes API datastore, 50 nodes or less*
     
     2. Now Run `kubectl apply -f <filename_or_url>` command on Master node
       ```console
