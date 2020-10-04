@@ -1,5 +1,7 @@
 ## Setup Multinode Kubernetes cluster quickly on Ubuntu VMs
 
+P.S.: *I have setup 3 Nodes Kubernetes Cluster on GCP* 
+
 ## Prerequisite:
   a. 3 VMs having specification of (**2 vCPUs, 2 GB memory**, 10GB storage)
   
@@ -8,7 +10,7 @@
 
 ### Simplified steps to setup cluster (1 Master & 2 Worker Nodes). 
 
-*(P.S. These step are Not limited to 2 worker nodes only, If you have `N` number of worker nodes, just repeat worker nodes steps on all the worker nodes)*
+*(P.S. These step are Not limited to 2 worker nodes only, If you have `N` number of worker nodes, just repeat worker nodes specific steps on each worker node)*
 
 #### Setup Docker Runtime on each VM
 
@@ -206,7 +208,7 @@ kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discove
     ```
 #### Now Join each worker Nodes to Master node in the cluster by running `kubeadm join` command from Worker node VM 
 
-*Important!:* To join worker node in the cluster please Switch to Worker Node VM terminal (Do this for each worker node)
+*Important!:* To join worker node in the cluster, Please Switch to Worker Node's VM terminal **(Repeat this step for each worker node)**
 
 1. Copy `kubeadm join xxxxxx ` command from text editor previously copied as `kubeadm init` command output & run on each **Worker Node**
 i.e.  
