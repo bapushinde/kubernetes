@@ -12,3 +12,7 @@ Example : git clone <repo_url>
 ### Step 5: kubectl get all --all-namespaces 
 
 Verify that metric-server components **pod/service/deployment/replicaset** are in **running** status
+
+### Step 6: kubectl top nodes - (Should output cpu & memory of nodes)
+
+### Step 7: kubectl top pod - (Should output cpu & memory of pod if any running in default namespace)
