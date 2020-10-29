@@ -250,3 +250,5 @@ bapus_pro_2020@terraform-k8s-master-0:~$
 ```
 
 ## Congratulations, Here you've Successfully setup Kubernetes Cluster (1 Master Node and 2 Worker Nodes)!!
+
+P.S.: To Setup Kubernetes Metrics API server refer documentation [Metrics-API-Server](https://github.com/bapushinde/kubernetes/blob/main/MetricsAPIServerSetup.md)
